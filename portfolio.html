@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Summaya - Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Summaya</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+
+            <div class="project">
+                <img src="pro1.jpg" alt="Project 1">
+                <div class="project-details">
+                    <h3>Arduino-Based Robotic Arm with EMG Control</h3>
+                    <p>In the realm of robotics, the integration of human-machine interfaces enhances
+                         the adaptability and usability of robotic systems. This project explores the
+                          use of EMG signals to control a 3D-printed robotic arm, opening possibilities
+                           for applications in prosthetics, human-robot collaboration, and rehabilitation.</p>
+                    <p>Role: Developer</p>
+                    <code>
+                        #include <Servo.h>
+
+                            Servo servo1; 
+                            Servo servo2;
+                            
+                            
+                            int emgPin = A0; 
+                            int emgValue;
+                            int muscleThreshold = 500; 
+                            
+                            void setup() {
+                              servo1.attach(pin1); 
+                              servo2.attach(pin2);
+                              
+                              
+                              pinMode(emgPin, INPUT); 
+                            }
+                            
+                            void loop() {
+                              emgValue = analogRead(emgPin); 
+                              
+                              if (emgValue > muscleThreshold) {
+                               
+                                servo1.write(angle1);
+                                servo2.write(angle2);
+                               
+                              }
+                            }
+                            
+                    </code>
+                    <p><a href= "https:docs.arduino.cc/hardware/uno-rev3" target="_blank">Live Project</a></p>
+                </div>
+            </div>
+<!--
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-details">
+                    <h3>Project 2 Title</h3>
+                    <p>Project description goes here. Briefly explain what the project is about and its significance.</p>
+                    <p>Role: Your role in the project, e.g., Developer, Designer, etc.</p>
+                    <code>
+                        // Code snippet or highlight some code related to the project
+                        function exampleCode() {
+                            // Code goes here
+                        }
+                    </code>
+                    <p><a href="https://www.example.com/project2" target="_blank">Live Project</a></p>
+                </div>
+            </div>
+-->
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <!-- Add more sections/content as needed -->
+
+    <footer>
+        <div class="container">
+            <p> 2023 Summaya. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
